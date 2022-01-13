@@ -1,0 +1,4 @@
+spring.data.mongodb:
+  database: shoppingDB
+  host: localhost
+  port: 27017
