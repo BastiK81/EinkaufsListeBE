@@ -7,13 +7,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ListController {
 
     private ListService listService;
 
     public ListController(ListService listService) {
         this.listService = listService;
+    }
+
+    @GetMapping("/")
+    public String helloWorld() {
+        return "Hello World!";
     }
 
     @PutMapping(value = "list/addCount/{id}")
