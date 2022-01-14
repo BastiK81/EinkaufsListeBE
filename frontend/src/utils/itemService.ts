@@ -44,16 +44,16 @@ const ItemService = ():IItemService => {
         getItems: () => items,
         addItem: (item:string, count:number) => {
             const id:string = uuidv4()
-            addData('http://localhost:8080/list/addItem', {id: id, name: item, anzahl: count, gestrichen: false}, 'POST');
+            addData('/list/addItem', {id: id, name: item, anzahl: count, gestrichen: false}, 'POST');
         },
         removeItem: (id:string) => {
-            addData('http://localhost:8080/list/removeItem/' + id, {}, 'DELETE');
+            addData('/list/removeItem/' + id, {}, 'DELETE');
         },
         addCount: (id:string) => {
-            addData('http://localhost:8080/list/addCount/' + id, {}, 'PUT');
+            addData('/list/addCount/' + id, {}, 'PUT');
         },
         decreaseCount: (id:string) => {
-            addData('http://localhost:8080/list/decreaseCount/' + id, {}, 'PUT');
+            addData('/list/decreaseCount/' + id, {}, 'PUT');
         }
     }
 }
