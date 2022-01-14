@@ -3,7 +3,6 @@ package com.example.einkaufslistebe.controller;
 import com.example.einkaufslistebe.items.ListItem;
 import com.example.einkaufslistebe.services.ListService;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -15,11 +14,6 @@ public class ListController {
     public ListController(ListService listService) {
         this.listService = listService;
     }
-
-//    @GetMapping("/")
-//    public String helloWorld() {
-//        return "Hello World!";
-//    }
 
     @PutMapping(value = "list/addCount/{id}")
     public List<ListItem> addItemCount(@PathVariable String id) {
