@@ -1,4 +1,6 @@
-spring.data.mongodb:
-  database: shoppingDB
-  host: localhost
-  port: 27017
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://sebastian:64RXcDqVxczQoVWz@testcluster.rs7xl.mongodb.net/shoppingDB?retryWrites=true&w=majority
+    datasource:
+      url: api
